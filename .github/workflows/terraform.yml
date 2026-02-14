@@ -4,3 +4,11 @@ on:
   push:
     branches:
       - main
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: check out code
+        uses: actions/checkout@v3
