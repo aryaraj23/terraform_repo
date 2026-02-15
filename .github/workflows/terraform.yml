@@ -22,6 +22,8 @@ jobs:
         run: terraform plan
       - name: terraform apply
         run: terraform apply -auto-approve
+      - name: Wait for 5 min before destroying
+        run: sleep 300
       - name: terraform destroy
         run: terraform destroy -auto-approve
          
